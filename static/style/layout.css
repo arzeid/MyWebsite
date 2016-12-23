@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Trirong|Open+Sans|Raleway');
+
+h1,h2,h3        { color: black; font-family: 'Trirong', serif;
+                  margin: 0; text-align: center; padding:0; }
+h1 a,h2 a,h3 a  { color: black; text-decoration: none; }
+h1              { font-weight: 300; padding-top: 50px; }
+h2              { font-weight: 200; }
+h3              { font-weight: 100; }
+body, input     { font-family: 'Raleway', sans-serif; font-weight: 50; }
+body            { background: white; margin: 0; padding: 0; height:100%; }
+p               { margin: 0; padding:4px; }
+
+.vertical-space-uncollapsable{ margin:10px; }
+.vertical-space{ margin:10px; }
+
+.centered-text{
+    text-align:center;
+}
+
+#topnav-menu{
+    display: none;
+    font-family: 'Trirong', monospace;
+    text-align: center;
+    border-top: 1px solid black;
+    margin: 0;
+    padding: 0;
+    opacity: 0.7; 
+}
+
+#topnav-menu a{
+    color: black; 
+    text-decoration: none;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+ul.topnav li, li.dropdown {display: inline-block;  font-weight: 500;}
+
+ul.topnav li a, .dropbtn {
+    display: block;
+    text-align: center;
+    padding: 0px 14px;
+    text-decoration: none;
+    /*color: #4d4d4d;*/
+    color: black;
+    opacity: 0.4;
+    min-width: 65px;    
+    border-right-color: white; border-right-style: solid; border-right-width: 1px;
+    border-left-color: white; border-left-style: solid; border-left-width: 1px;
+}
+
+.dropbtn:focus{ color: black; }
+
+ul.topnav li a:hover:not(.active) { opacity: 1; }
+
+.topnav {
+    font-family: 'Trirong', monospace;
+    /*font-size: 14px;*/
+    float:center;
+    text-align:center;
+    margin: 0;
+    padding: 0;
+    background: white;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    float:center;
+    background-color: #f9f9f9;
+    min-width: 65px;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    margin-top: 2px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+/*
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+*/
+.dropdown-content-show { display: block; }
+
+
+
+/* Footer CSS */
+/* Sticky Footer CSS */
+/* "body padding-bottom"="footer height"=-"footer margin-top" */
+html, body { height: 100%;}
+#container { min-height: 100%;}
+#body      { overflow:auto;   padding-bottom: 38px; }
+footer     { position:relative; margin-top: -38px; height: 37px; clear:both; }
+/* Opera Fix */
+body:before {content:"";height:100%;float:left;width:0;margin-top:-32767px;/}
+/* End of Sticky Footer CSS */
+ footer {
+            background-color: #333;
+            width: 100%;
+            bottom: 0;
+            border-top: 1px solid black;
+            text-align: center; 
+            background: white;
+        }
+footer a   {text-decoration: none;}
+
+.footer-margin {margin:5px;}
+
+#header *, footer *:focus{outline:0px solid transparent;}
+
+.social-icons{ height: 28px; opacity: 0.5; }
+.social-icons:hover {opacity: 1;}
+/* End of Footer CSS */
+
+/* Mobile CSS */
+@media screen and (max-width: 500px){
+    ul.topnav li        { display: block; padding-bottom: 0px; }
+    .dropdown-content   { position: relative; margin-top: 0px; box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);}
+    .vertical-space     { margin: 0; padding:0; }
+    .box                { padding:0; }
+    h1                  { padding-top:0; }
+    #topnav-menu        { display: block; border-bottom: 1px solid black;}
+    .topnav             { display: none;  border-top: 0px;}
+}
+
+@media screen and (max-height: 400px){
+    .vertical-space { margin: 0; padding:0;}
+    .box            { padding:0; }
+    h1              { padding-top:0;}
+}
+
+@media (max-width: 500px) {
+    html  { font-size: 20px; }
+    input { font-size: 16px; }
+}
+
+@media (max-width: 400px) {
+    html  { font-size: 24px; }
+    input { font-size: 20px; }
+}
+/* End of Mobile CSS */
+
+

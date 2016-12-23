@@ -1,0 +1,17 @@
+To run flask in debug mode 
+=============================
+FLASK_APP=mywebsite.py
+export FLASK_DEBUG=1
+pip install -e .
+flask run
+
+Make server publicly accessible
+==================================
+flask run --host=0.0.0.0
+
+Make prompt show the current directory only
+==============================================
+PS1="\W$"
+
+
+http://flask.pocoo.org/docs/0.12/patterns/packages/

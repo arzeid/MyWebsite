@@ -1,0 +1,66 @@
+.box        { 
+    /*
+    width: 80%;
+    height: 180px;
+    */
+    width: 85%;
+    margin: auto; 
+    padding: 20px;
+    background: white; 
+    /*box-shadow: 0 1px 4px #BED1D4;
+    border-radius: 2px; */
+    
+}
+
+
+.error      { background: red; padding: 0px 0px; color: black;
+              border-radius: 3px; text-align: center;}
+
+.urlinput   { 
+    /*width: 200px; */
+    width: 100%;
+    min-width: 50px;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    text-align: center;
+}
+
+.urlinput-button{
+    width: 100%;
+    min-width: 88px;
+}
+
+#url_count_line{
+    text-align:center;
+}
+
+.shorten_link   { white-space: nowrap; overflow: hidden;
+                  text-overflow: ellipsis;}
+
+
+
+/*DL, DT, DD TAGS LIST DATA*/
+dl {
+    margin-bottom:0px;
+    
+}
+ 
+dl dt {
+    float:left;
+    margin-right:5px; 
+    padding:0px;  
+    width:100px; 
+}
+
+.row{
+    margin:0 auto;
+    width: 80%;
+}
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}sHORTEN - {% endblock %}
+{% block head %}
+    {{ super() }}
+    <script type="text/javascript" src="/static/javascript/shorten.js"></script>
+    <link rel=stylesheet href=/static/style/shorten.css type=text/css>
+{% endblock %}
+{% block page %}
+<div class=box>
+    <h2><a href="/shorten/">sHORTEN</a></h2>
+    {% block body %}{% endblock %}
+</div>
+{% endblock %}

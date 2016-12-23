@@ -1,0 +1,21 @@
+{% extends "shorten.html" %}
+{% block title %}Create New Short URL -{% endblock %}
+
+{% block body %}
+    <h3>A URL Shortner</h3>
+    <p id="url_count_line">
+        <span id="url_count">{{ url_count }}</span> url(s) already shortened
+    
+    <form action="" method=post>
+    
+        
+        <input type=text name=url value="{{ url }}" class=urlinput 
+             placeholder="Your URL Here">
+        <input type=submit value="Shorten" class=urlinput-button>
+        {% if error %}
+        <div class="error">Error: {{ error }} </div>
+        {% else %}
+        <div class="error-space"> </div>
+        {% endif %}
+    </form>
+{% endblock %}
