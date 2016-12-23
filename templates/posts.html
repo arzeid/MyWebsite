@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="{{ url_for('pygments_css') }}">
+{% for post in posts %}
+    <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+        {{ post.title }}
+    </a>
+    <small>{{ post.published }}</small>
+{% endfor %}
