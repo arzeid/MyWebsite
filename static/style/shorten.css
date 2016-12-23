@@ -1,16 +1,4 @@
-.box        { 
-    /*
-    width: 80%;
-    height: 180px;
-    */
-    width: 85%;
-    margin: auto; 
-    padding: 20px;
-    background: white; 
-    /*box-shadow: 0 1px 4px #BED1D4;
-    border-radius: 2px; */
-    
-}
+
 
 
 .error      { background: red; padding: 0px 0px; color: black;

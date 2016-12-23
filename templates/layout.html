@@ -1,7 +1,9 @@
 <!doctype html>
+<html>
+<head>
+{% block head %}
 <title>{% block title %}{% endblock %} Abdelrahmein Zeid</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{% block head %}
 <link rel=stylesheet href=/static/style/layout.css type=text/css>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type=text/javascript>
@@ -9,6 +11,16 @@
 </script>
 <script type="text/javascript" src="/static/javascript/css_engine.js"></script>
 {% endblock %}
+</head>
+
+{% set navigation_bar = [
+    ('/', 'Home', 'in'),
+    ('/blog/', 'Blog', 'in'),
+    ('https://drive.google.com/file/d/0B7CoVsAaa3azazBwNGhuNXVYY0U/view?usp=sharing/', 
+        'Resume', 'out'),
+    ('/shorten/', 'Shorten', 'in')
+] -%}
+{% set active_page = active_page|default('Home') -%}
 
 <div id="container">
     <div id="header">
@@ -20,6 +32,19 @@
         </div>
         <ul class="topnav">
             
+            {% for href, id, location in navigation_bar %}
+            <li {%if id == active_page %} class="active-page" {% endif%}>
+            {%if id == active_page %}
+                <a href="#" >{{ id|e }}</a>
+            {%else %}
+                <a href="{{ href|e }}" 
+                {%if location == 'out' %}target="_blank"{% endif%}>
+                {{ id|e }}
+                </a>
+            {% endif%}
+            </li>
+            {% endfor %}
+            
             <!--
             <li class="dropdown">
                 <a href="javascript:void(0);" class="dropbtn">Projects &#9662;</a>
@@ -30,22 +55,6 @@
                 </div>
             </li>
             -->
-            
-            
-            
-            <li>
-                <a href="https://drive.google.com/file/d/0B7CoVsAaa3azazBwNGhuNXVYY0U/view?usp=sharing" 
-                   target="_blank">
-                    Resume
-                </a>
-            </li>
-            
-            <li>
-                <a href="/shorten">
-                    Shorten
-                </a>
-            </li>
-
         </ul>
     </div>
     
@@ -90,3 +99,4 @@
              alt="soundcloud icon" class="social-icons">
     </a>
 </footer>
+</html>

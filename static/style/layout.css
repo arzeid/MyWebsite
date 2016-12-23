@@ -17,6 +17,24 @@ p               { margin: 0; padding:4px; }
     text-align:center;
 }
 
+.box{ 
+    /*
+    width: 80%;
+    height: 180px;
+    */
+    width: 85%;
+    margin: auto; 
+    padding: 20px;
+    background: white; 
+    /*box-shadow: 0 1px 4px #BED1D4;
+    border-radius: 2px; */
+    
+}
+
+.active-page a{ 
+    opacity: 1!important;
+}
+
 #topnav-menu{
     display: none;
     font-family: 'Trirong', monospace;
@@ -153,5 +171,3 @@ footer a   {text-decoration: none;}
     input { font-size: 20px; }
 }
 /* End of Mobile CSS */
-
-

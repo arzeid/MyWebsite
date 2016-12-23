@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}blog index - {% endblock %}
+{% block head %}
+    {{ super() }}
+    <script type="text/javascript" src="/static/javascript/shorten.js"></script>
+    <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
+    <link rel=stylesheet href=/static/style/blog.css type=text/css>
+{% endblock %}
+{% set active_page = "Blog" %}
+{% block page %}
+<div class="box">
+    <h2><a href="/blog/">Blog Index</a></h2>
+{% for post in posts %}
+    <div class="post">
+        <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+            {{ post.title }}
+        </a>
+        <br>
+        <small>{{ post.published }}</small>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

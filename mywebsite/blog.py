@@ -6,7 +6,7 @@ from flask_flatpages import pygments_style_defs
 def posts():
     posts = [p for p in flat_pages]
     posts.sort(key=lambda item:item['published'], reverse=False)
-    return render_template('posts.html', posts=posts)
+    return render_template('blog.html', posts=posts)
 
 @app.route('/blog/<name>/')
 def post(name):
@@ -15,5 +15,5 @@ def post(name):
 
 @app.route('/pygments.css')
 def pygments_css():
-    return pygments_style_defs('rrt'), 200, {'Content-Type': 'text/css'}
+    return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
 
