@@ -34,14 +34,10 @@
             
             {% for href, id, location in navigation_bar %}
             <li {%if id == active_page %} class="active-page" {% endif%}>
-            {%if id == active_page %}
-                <a href="#" >{{ id|e }}</a>
-            {%else %}
                 <a href="{{ href|e }}" 
                 {%if location == 'out' %}target="_blank"{% endif%}>
                 {{ id|e }}
                 </a>
-            {% endif%}
             </li>
             {% endfor %}
             

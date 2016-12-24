@@ -2,4 +2,31 @@
 a { color: black; text-decoration: none; opacity:0.8; outline:0px solid transparent;}
 small { opacity:0.5; }
 
-.post{ text-align:center; }
+.post-box p{
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.codehilite{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.post-name{ text-align:center; }
+
+.post-box{ 
+    width: 100%;
+    margin: auto; 
+    padding-top: 10px;
+    padding-right: 00px;
+    padding-bottom: 10px;
+    padding-left: 00px;
+    background: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+}
+
+.post-date{ text-align:right; color:black; opacity:0.5;}

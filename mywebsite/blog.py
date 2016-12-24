@@ -15,5 +15,5 @@ def post(name):
 
 @app.route('/pygments.css')
 def pygments_css():
-    return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
+    return pygments_style_defs('monokai'), 200, {'Content-Type': 'text/css'}
 

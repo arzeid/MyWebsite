@@ -1,5 +1,18 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="{{ url_for('pygments_css') }}">
-{{ post.html|safe }}
-{{ post.title }}
-{{ post.published }}
+{% extends "blog.html" %}
+{% block title %}{{ post.title }} - {% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
+{% endblock %}
+{% block page %}
+<div class="vertical-space"></div>
+
+<div class="box">
+    <h2>{{ post.title }}</h2>
+<div class="post-box">
+    {{ post.html|safe }}
+</div>
+    <div class='post-date'>{{ post.published }}</div>
+</div>
+{% endblock %}
