@@ -10,6 +10,7 @@
     $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
 <script type="text/javascript" src="/static/javascript/css_engine.js"></script>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 {% endblock %}
 </head>
 
