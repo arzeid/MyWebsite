@@ -1,5 +1,5 @@
 from mywebsite import app, flat_pages
-from flask import Flask, render_template, request, redirect, jsonify, url_for
+from flask import render_template
 from flask_flatpages import pygments_style_defs
 
 @app.route("/blog/")
@@ -8,7 +8,7 @@ def posts():
     posts.sort(key=lambda item:item['published'], reverse=False)
     return render_template('blog.html', posts=posts)
 
-@app.route('/blog/<name>/')
+@app.route('/blog/post/<name>/')
 def post(name):
     post = flat_pages.get_or_404(name)
     return render_template('post.html', post=post)

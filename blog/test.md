@@ -1,6 +1,6 @@
 title: This is a test blog to test with
 published: 2020-02-20
-
+category: python
 
 
 asd

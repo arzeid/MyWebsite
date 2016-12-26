@@ -13,5 +13,12 @@ Make prompt show the current directory only
 ==============================================
 PS1="\W$"
 
+freeze requirements
+==========================
+pip freeze > requirements.txt
+
+install requirments
+=============================
+pip install -r requirements.txt
 
 http://flask.pocoo.org/docs/0.12/patterns/packages/

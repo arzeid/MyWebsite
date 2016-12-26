@@ -5,7 +5,16 @@ setup(
     packages=['mywebsite'],
     include_package_data=True,
     install_requires=[
-        'flask',
-        'redis'
+        'click',
+        'Flask',
+        'Flask-FlatPages',
+        'itsdangerous',
+        'Jinja2',
+        'Markdown',
+        'MarkupSafe',
+        'Pygments',
+        'PyYAML',
+        'redis',
+        'Werkzeug'
     ],
 )

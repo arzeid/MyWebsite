@@ -74,7 +74,7 @@ def handle_link_not_found(error):
     return render_template('short_link_not_found.html',
         short_id=error.short_id,
         message=error.message
-    )
+    ), 404
 
 def insert_url(url):
     short_id = redis.get('reverse-url:' + url)

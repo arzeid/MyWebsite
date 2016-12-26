@@ -1,13 +1,14 @@
 {% extends "shorten.html" %}
 {% block title %}Details about /{{ short_id }} - {% endblock %}
 {% block body %}
-  <h3>URL Information</h3>
-  <dl>
+<h3>URL Information</h3>
+<dl>
     <div class="row">
         <dt>Short link:
         <dd>
             <div class="shorten_link">
-            <a href="/shorten/{{ short_id }}" target="_blank" id="short_link">azeid.com/shorten/{{ short_id }}</a>
+            <a href="/shorten/{{ short_id }}" target="_blank" 
+               id="short_link">azeid.com/shorten/{{short_id}}</a>
             </div>
     </div>
     <div class="row">
@@ -18,5 +19,5 @@
         <dt>Click count:
         <dd>{{ click_count }}
     </div>
-  </dl>
+</dl>
 {% endblock %}
