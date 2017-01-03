@@ -2,6 +2,7 @@ from __future__ import print_function
 import os
 from flask import Flask
 from flask_flatpages import FlatPages
+import sys
 
 assets_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -14,16 +15,32 @@ app = Flask(
     root_path = os.path.join(assets_path,__name__)
 )
 
-app.config.from_pyfile('development.cfg', silent=False)
+if os.path.isfile(os.path.join(assets_path,'instance','deployment.cfg')):
+    app.config.from_pyfile('deployment.cfg', silent=False)
+    print("===deployment config loaded===", file=sys.stderr)
+elif os.path.isfile(os.path.join(assets_path,'instance','development.cfg')):
+    app.config.from_pyfile('development.cfg', silent=False)
+    print("===development config loaded===", file=sys.stderr)
+else:
+    app.config.update(
+        DEBUG = True,
+        TESTING = True,
+        PROPAGATE_EXCEPTIONS = True,
+        REDIS_HOST = 'localhost',
+        REDIS_PORT = 6379,
+        FLATPAGES_AUTO_RELOAD = 'DEBUG',
+        FLATPAGES_EXTENSION = '.md'
+    )
+    print("===default config loaded===", file=sys.stderr)
+
 app.config['FLATPAGES_ROOT'] = os.path.join(assets_path,'blog')
 
 flat_pages = FlatPages(app)
 
 if app.debug:
-    import sys
     from pygments.styles import get_all_styles
-    print(sys.version, file=sys.stderr)
-    print(list(get_all_styles()))
+    print("==="+sys.version+"===", file=sys.stderr)
+    #print(list(get_all_styles()))
 else:
     import logging
     from logging import FileHandler
