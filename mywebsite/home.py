@@ -1,6 +1,5 @@
 from mywebsite import app
 from flask import render_template, send_from_directory
-import os
 
 @app.route('/')
 def index():

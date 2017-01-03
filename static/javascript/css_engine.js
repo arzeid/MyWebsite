@@ -10,7 +10,7 @@ $(document).ready(function(){
         $(this).siblings(".topnav").toggle();
     });
     $(window).resize(function() {
-        if($(window).width() > 500) {
+        if($(window).width() > 521) {
             $(".topnav").show();
         }
     });

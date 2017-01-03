@@ -145,11 +145,11 @@ footer a   {text-decoration: none;}
 /* End of Footer CSS */
 
 /* Mobile CSS */
-@media screen and (max-width: 500px){
+@media screen and (max-width: 521px){
     ul.topnav li        { display: block; padding-bottom: 0px; }
     .dropdown-content   { position: relative; margin-top: 0px; box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);}
     .vertical-space     { margin: 0; padding:0; }
-    .box                { padding:0; }
+    .box                { padding:0; width:98%;}
     h1                  { padding-top:0; }
     #topnav-menu        { display: block; border-bottom: 1px solid black;}
     .topnav             { display: none;  border-top: 0px;}
@@ -161,13 +161,21 @@ footer a   {text-decoration: none;}
     h1              { padding-top:0;}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 521px) {
     html  { font-size: 20px; }
     input { font-size: 16px; }
+    #body      { padding-bottom: 43px; }
+    footer     { margin-top: -43px; height: 42px; }
+    .footer-margin {margin:5px;}
+    .social-icons{ height: 32px; opacity: 0.5; }
 }
 
 @media (max-width: 400px) {
     html  { font-size: 24px; }
     input { font-size: 20px; }
+    #body      { padding-bottom: 48px; }
+    footer     { margin-top: -48px; height: 47px; }
+    .footer-margin {margin:5px;}
+    .social-icons{ height: 36px; opacity: 0.5; }
 }
 /* End of Mobile CSS */
