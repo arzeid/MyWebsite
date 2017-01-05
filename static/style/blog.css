@@ -1,13 +1,16 @@
+a { color: black; text-decoration: none; opacity:1; outline:0px solid transparent;}
 
-a { color: black; text-decoration: none; opacity:0.8; outline:0px solid transparent;}
 small { opacity:0.5; }
 
-h3  { font-weight: 300; padding-top: 10px; }
+h3  { font-weight: 300; padding-top: 10px; color: black;}
 
 .post-box p{
     padding-right: 25px;
     padding-left: 25px;
 }
+
+.post-box a { color: black; text-decoration: underline; 
+			  outline:0px solid transparent;}
 
 .codehilite{
     padding-right: 10px;
@@ -23,6 +26,14 @@ h3  { font-weight: 300; padding-top: 10px; }
 .code{
 	width: 100%  !important;
 	
+}
+
+code{
+	border: black 1px solid;
+	padding-left:1px;
+    padding-right:1px;
+    background: white;
+    color: #f92672;
 }
 
 table.codehilitetable,table.codehilitetable * {
@@ -53,7 +64,7 @@ table.codehilitetable {
 
 #post-title{ text-align:center; }
 
-#post-date{ float:left; color:black; opacity:0.5; clear: both;}
+#post-date{ float:left; color:black; opacity:1; clear: both;}
 
-#post-category{ float:left; color:black; opacity:0.5; clear: both;}
+#post-category{ float:left; color:black; opacity:1; clear: both;}
 
