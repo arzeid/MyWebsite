@@ -7,7 +7,7 @@ h1              { font-weight: 300; padding-top: 50px; }
 h2              { font-weight: 200; }
 h3              { font-weight: 100; }
 body, input     { font-family: 'Raleway', sans-serif; font-weight: 50; }
-body            { background: white; margin: 0; padding: 0; height:100%; }
+body            { background: white; margin: 0; padding: 0; height:100%; overflow-y: scroll;}
 p               { margin: 0; padding:4px; }
 
 .vertical-space-uncollapsable{ margin:10px; }
@@ -145,7 +145,7 @@ footer a   {text-decoration: none;}
 /* End of Footer CSS */
 
 /* Mobile CSS */
-@media screen and (max-width: 521px){
+@media screen and (max-width: 500px){
     ul.topnav li        { display: block; padding-bottom: 0px; }
     .dropdown-content   { position: relative; margin-top: 0px; box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);}
     .vertical-space     { margin: 0; padding:0; }
@@ -161,7 +161,7 @@ footer a   {text-decoration: none;}
     h1              { padding-top:0;}
 }
 
-@media (max-width: 521px) {
+@media (max-width: 500px) {
     html  { font-size: 20px; }
     input { font-size: 16px; }
     #body      { padding-bottom: 43px; }
