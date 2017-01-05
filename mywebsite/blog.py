@@ -8,7 +8,7 @@ def posts():
     posts.sort(key=lambda item:item['published'], reverse=False)
     return render_template('blog.html', posts=posts)
 
-@app.route('/blog/post/<name>/')
+@app.route('/blog/<name>/')
 def post(name):
     post = flat_pages.get_or_404(name)
     return render_template('post.html', post=post)
