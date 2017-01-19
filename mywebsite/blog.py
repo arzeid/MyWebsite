@@ -2,11 +2,17 @@ from mywebsite import app, flat_pages
 from flask import render_template
 from flask_flatpages import pygments_style_defs
 
+posts_list = []
+
+@app.before_first_request
+def generate_posts_list():
+    global posts_list
+    posts_list = [p for p in flat_pages]
+    posts_list.sort(key=lambda item:item['published'], reverse=False)
+
 @app.route("/blog/")
 def posts():
-    posts = [p for p in flat_pages]
-    posts.sort(key=lambda item:item['published'], reverse=False)
-    return render_template('blog.html', posts=posts)
+    return render_template('blog.html', posts=posts_list)
 
 @app.route('/blog/<name>/')
 def post(name):

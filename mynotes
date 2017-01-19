@@ -1,6 +1,6 @@
 To run flask in debug mode 
 =============================
-FLASK_APP=mywebsite
+export FLASK_APP=mywebsite
 export FLASK_DEBUG=1
 pip install -e .
 flask run

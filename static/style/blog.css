@@ -5,8 +5,8 @@ small { opacity:0.5; }
 h3  { font-weight: 300; padding-top: 10px; color: black;}
 
 .post-box p{
-    padding-right: 25px;
-    padding-left: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .post-box a { color: black; text-decoration: underline; 
@@ -14,7 +14,7 @@ h3  { font-weight: 300; padding-top: 10px; color: black;}
 
 .codehilite{
     padding-right: 10px;
-    padding-left: 10px;
+    padding-left: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
 	margin-top: 5px;
