@@ -11,9 +11,9 @@
     <h2 id="post-title">{{ post.title }}</h2>
     <span id='post-date'>{{ post.published }}</span>
     <br>
-<div class="post-box">
-    {{ post.html|safe }}
-</div>
+    <div class="post-box">
+        {{ post.html|safe }}
+    </div>
     <span id='post-category'>{{ post.category }}</span>
 </div>
 {% endblock %}
