@@ -1,5 +1,14 @@
+.box * {    outline: 0;}
+.box a { color:#f92672;}
 
-
+.box {
+    background: #f2f2f2;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
 
 .error      { background: red; padding: 0px 0px; color: black;
               border-radius: 3px; text-align: center;}
@@ -12,19 +21,58 @@
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
     text-align: center;
+    padding: 0px;
+    margin: 0 auto;
 }
 
 .urlinput-button{
-    width: 100%;
     min-width: 88px;
+    background-color:#f92672;
+    outline: 0;
+    
+    border: white;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 3px #999;
+    padding-left:5px;
+    padding-right:5px;
+    width: 100%;
+    margin: 0 auto;
+    min-width:20px;
+    float:center;
+}
+
+#shorten-form{
+    width: 98%;
+    margin: auto; 
+}
+
+.urlinput-button:hover {background-color: #c7054c;}
+
+.urlinput-button:active {
+  background-color: #c7054c;
+  box-shadow: 0 1px #666;
+  transform: translateY(2px);
+}
+
+.red{
+    background-color:red;
 }
 
 #url_count_line{
     text-align:center;
 }
 
-.shorten_link   { white-space: nowrap; overflow: hidden;
-                  text-overflow: ellipsis;}
+.shorten_link  a { 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    color: #f92672;
+    
+}
 
 
 
@@ -43,7 +91,10 @@ dl dt {
 
 .row{
     margin:0 auto;
-    width: 80%;
+    
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .truncate {

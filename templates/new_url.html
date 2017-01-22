@@ -6,12 +6,12 @@
     <p id="url_count_line">
         <span id="url_count">{{ url_count }}</span> url(s) already shortened
     
-    <form action="" method=post>
+    <form action="" method=post id='shorten-form'>
     
         
         <input type=text name=url value="{{ url }}" class=urlinput 
              placeholder="Your URL Here">
-        <input type=submit value="Shorten" class=urlinput-button>
+        <input type=submit value="Shorten" class=urlinput-button disabled>
         {% if error %}
         <div class="error">Error: {{ error }} </div>
         {% else %}
