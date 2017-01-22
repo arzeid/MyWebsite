@@ -54,8 +54,27 @@ $(document).ready(function(){
             //$('.urlinput').addClass('red');
         }
     });
-    
-    $('input').keyup(function() {
+    /*
+    $(".urlinput").focus(function(){
+        var url = $(this).val();
+        if(url.length > 0)
+        {
+            if (isValidUrl(url)==true){
+                //$('.urlinput-button').val("Shorten "+String.fromCharCode(10004));
+                $('.urlinput-button').prop('disabled', false);
+                $('.urlinput-button').val("Shorten");
+            }
+            else{
+                $('.urlinput-button').val("Invalid URL");
+                $('.urlinput-button').prop('disabled', true);
+                //$('.urlinput').addClass('red');
+            }
+        }
+    });
+
+
+        
+    $('.urlinput').keyup(function() {
         var url = $(this).val();
         
         if (isValidUrl(url)==true){
@@ -69,6 +88,23 @@ $(document).ready(function(){
             //$('.urlinput').addClass('red');
         }
      
+    });
+    */
+    $(".urlinput").on('input keyup focus keypress change', function() {
+        var url = $(this).val();
+        if(url.length > 0)
+        {
+            if (isValidUrl(url)==true){
+                //$('.urlinput-button').val("Shorten "+String.fromCharCode(10004));
+                $('.urlinput-button').prop('disabled', false);
+                $('.urlinput-button').val("Shorten");
+            }
+            else{
+                $('.urlinput-button').val("Invalid URL");
+                $('.urlinput-button').prop('disabled', true);
+                //$('.urlinput').addClass('red');
+            }
+        }
     });
 });
 
