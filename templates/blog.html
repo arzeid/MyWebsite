@@ -2,19 +2,29 @@
 {% block title %}blog index - {% endblock %}
 {% block head %}
     {{ super() }}
+    <script type="text/javascript" src="/static/javascript/blog.js"></script>
     <link rel=stylesheet href=/static/style/blog.css type=text/css>
+    <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
 {% endblock %}
 {% set active_page = "Blog" %}
 {% block page %}
 <div class="vertical-space-uncollapsable"></div>
 <div class="box">
 {% for post in posts %}
-    <div class="post-name">
-        <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
-            {{ post.title }}
-        </a>
+    <div class="post">
+        <h2 id="post-title">        
+            <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+                {{ post.title }}
+            </a>
+        </h2>
+        <span id='post-date'>{{ post.published }}</span>
+        <a href='javascript:void(0);' class='arrow'>&#9662;</a>
         <br>
-        <small>{{ post.published }}</small>
+        <div class="collapsed-border"></div>
+        <div class="post-box">
+            {{ post.html|safe }}
+        </div>
+        <div class="vertical-space-uncollapsable"></div>
     </div>
 {% endfor %}
 </div>

@@ -2,18 +2,16 @@
 {% block title %}{{ post.title }} - {% endblock %}
 {% block head %}
     {{ super() }}
-    <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
 {% endblock %}
 {% block page %}
-<div class="vertical-space"></div>
-
+<div class="vertical-space-uncollapsable"></div>
 <div class="box">
     <h2 id="post-title">{{ post.title }}</h2>
     <span id='post-date'>{{ post.published }}</span>
     <br>
-    <div class="post-box">
+    <div class="collapsed-border"></div>
+    <div class="post-box" style='display: block;'>
         {{ post.html|safe }}
     </div>
-    <span id='post-category'>{{ post.category }}</span>
 </div>
 {% endblock %}

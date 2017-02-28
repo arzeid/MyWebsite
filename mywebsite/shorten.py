@@ -28,7 +28,7 @@ class LinkNotFound(Exception):
 @app.route('/shorten/', methods=['GET', 'POST'])
 def shorten():
     error = None
-    url = ''
+    url = None
     if request.method == 'POST':
         url = request.form['url']
         if not is_valid_url(url):
@@ -36,7 +36,11 @@ def shorten():
         else:
             short_id = insert_url(url)
             redirect_url =  url_for('short_link_details', short_id=short_id)
-            return redirect(redirect_url)
+            #return redirect(redirect_url)
+            return jsonify(
+                short_url=url_for('follow_short_link', short_id=short_id)
+                ,click_count = int(redis.get('click-count:' + short_id) or 0)
+            )
     url_count = redis.get('last-url-id')
     if not url_count:
         url_count = 0
@@ -63,9 +67,16 @@ def short_link_details(short_id):
     if link_target is None:
         raise LinkNotFound(short_id)
     click_count = int(redis.get('click-count:' + short_id) or 0)
+    '''
     return render_template('short_link_details.html',
         link_target=link_target,
         short_id=short_id,
+        click_count=click_count
+    )
+    '''
+    return jsonify(
+        link_target=link_target,
+        short_id=url_for(follow_short_link, short_id=short_id),
         click_count=click_count
     )
 

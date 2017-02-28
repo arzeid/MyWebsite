@@ -54,42 +54,7 @@ $(document).ready(function(){
             //$('.urlinput').addClass('red');
         }
     });
-    /*
-    $(".urlinput").focus(function(){
-        var url = $(this).val();
-        if(url.length > 0)
-        {
-            if (isValidUrl(url)==true){
-                //$('.urlinput-button').val("Shorten "+String.fromCharCode(10004));
-                $('.urlinput-button').prop('disabled', false);
-                $('.urlinput-button').val("Shorten");
-            }
-            else{
-                $('.urlinput-button').val("Invalid URL");
-                $('.urlinput-button').prop('disabled', true);
-                //$('.urlinput').addClass('red');
-            }
-        }
-    });
-
-
-        
-    $('.urlinput').keyup(function() {
-        var url = $(this).val();
-        
-        if (isValidUrl(url)==true){
-            //$('.urlinput-button').val("Shorten "+String.fromCharCode(10004));
-            $('.urlinput-button').prop('disabled', false);
-            $('.urlinput-button').val("Shorten");
-        }
-        else{
-            $('.urlinput-button').val("Invalid URL");
-            $('.urlinput-button').prop('disabled', true);
-            //$('.urlinput').addClass('red');
-        }
-     
-    });
-    */
+    
     $(".urlinput").on('input keyup focus keypress change', function() {
         var url = $(this).val();
         if(url.length > 0)
@@ -105,6 +70,24 @@ $(document).ready(function(){
                 //$('.urlinput').addClass('red');
             }
         }
+    });
+    
+    $("form").submit(function(e){
+        e.preventDefault();
+        var url = $("form .urlinput").val();
+        console.log(url);
+        $.post($SCRIPT_ROOT + '/shorten/',
+        {
+          url: url,
+        },
+        function(data,status){
+            alert("Short URL: " + data.short_url+ 
+                  "\nClick Count"+data.click_count + 
+                  "\nStatus: " + status);
+            $('.urlinput-button').val('short link generated');
+            $('#short_link').text($SCRIPT_ROOT+data.short_url);
+            $("#short_link").attr("href", $SCRIPT_ROOT+data.short_url)
+        }, 'json');
     });
 });
 

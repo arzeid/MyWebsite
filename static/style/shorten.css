@@ -8,11 +8,14 @@
     border-width: 1px;
     border-color: black;
     margin-top: 10px;
-    padding-bottom: 20px;
-    min-height: 160px;
+    padding-bottom: 10px;
+    min-height: 200px;
+    max-width: 800px;
 }
 
-
+#short_link{
+    text-align:center;
+}
 
 .error      { background: red; padding: 0px 0px; color: black;
               border-radius: 3px; text-align: center;}
@@ -55,6 +58,11 @@
 
 #shorten-form{
     width: 98%;
+    margin: auto; 
+}
+
+#url-information{
+    width: 90%;
     margin: auto; 
 }
 

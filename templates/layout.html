@@ -4,13 +4,13 @@
 {% block head %}
 <title>{% block title %}{% endblock %} Abdelrahmein Zeid</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel=stylesheet href=/static/style/layout.css type=text/css>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type=text/javascript>
     $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
 <script type="text/javascript" src="/static/javascript/css_engine.js"></script>
 <link rel="shortcut icon" href="/static/favicon.ico">
+<link rel=stylesheet href=/static/style/layout.css type=text/css>
 {% endblock %}
 </head>
 

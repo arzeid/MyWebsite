@@ -5,6 +5,12 @@ server {
 }
 
 server {
+    listen 80;
+    server_name www.azeid.com;
+    return 301 https://azeid.com$request_uri;
+}
+
+server {
     listen 443 ssl;
     server_name  www.azeid.com;
     ssl_certificate /etc/letsencrypt/live/azeid.com/fullchain.pem;
