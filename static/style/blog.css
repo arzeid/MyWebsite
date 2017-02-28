@@ -4,6 +4,7 @@ small { opacity:0.5; }
 
 h3  { font-weight: 300; padding-top: 10px; color: black;}
 
+
 .post-box p{
     padding-right: 10px;
     padding-left: 10px;
@@ -60,11 +61,37 @@ table.codehilitetable {
     border-width: 1px;
     border-color: black;
     overflow-x: hidden;
+    display:none;
+    border-top: 0px solid black;
+}
+/*
+.box:hover .post-box{display: block;}
+*/
+.collapsed-border{
+    width: 100%;
+    overflow-x: hidden;
+    margin: auto; 
+    display:block;
+    border-top: 1px solid black;
+    border-right: 2px solid black;
+    text-align:center;
 }
 
 #post-title{ text-align:center; }
 
-#post-date{ float:left; color:black; opacity:1; clear: both;}
 
-#post-category{ float:left; color:black; opacity:1; clear: both;}
+
+#post-date{ 
+    text-align:left; 
+    color:black; 
+    opacity:1; 
+}
+
+.arrow{
+    float:right; 
+    color:black; 
+    opacity:1; 
+}
+
+#post-category{ float:right; color:black; opacity:1; clear: both;}
 
