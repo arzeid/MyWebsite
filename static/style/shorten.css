@@ -13,9 +13,6 @@
     max-width: 800px;
 }
 
-#short_link{
-    text-align:center;
-}
 
 .error      { background: red; padding: 0px 0px; color: black;
               border-radius: 3px; text-align: center;}
@@ -118,4 +115,10 @@ dl dt {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#short_link{
+    text-align:center;
+    margin: auto; 
+    float:center;
 }

@@ -5,13 +5,17 @@
     <h3>A URL Shortner</h3>
     <p id="url_count_line">
         <span id="url_count">{{ url_count }}</span> url(s) already shortened
+    </p>
     
     <form action="" method=post id='shorten-form'>
-        <input type=text name=url value="{{ url }}" class=urlinput 
-             placeholder="Your URL Here">
+        <input type='text' name='url' class='urlinput' placeholder="Your URL Here">
         <input type=submit value="Shorten" class=urlinput-button disabled>
-        <a href="/shorten/" target="_blank" id='short_link'>
-        </a>
     </form>
+
+    <p id="url_count_line">
+        <a href="/shorten/" target="_blank" id='short_link'>
+            
+        </a>
+    </p>
 
 {% endblock %}

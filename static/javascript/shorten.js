@@ -81,12 +81,11 @@ $(document).ready(function(){
           url: url,
         },
         function(data,status){
-            alert("Short URL: " + data.short_url+ 
-                  "\nClick Count"+data.click_count + 
-                  "\nStatus: " + status);
+            //alert("Short URL: " + data.short_url+ 
+            //      "\nClick Count: "+data.click_count);
             $('.urlinput-button').val('short link generated');
-            $('#short_link').text($SCRIPT_ROOT+data.short_url);
-            $("#short_link").attr("href", $SCRIPT_ROOT+data.short_url)
+            $('#short_link').text('azeid.com'+data.short_url);
+            $("#short_link").attr("href", $SCRIPT_ROOT+data.short_url);
         }, 'json');
     });
 });
