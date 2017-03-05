@@ -9,11 +9,11 @@ $(document).ready(function(){
             postTitle.css("opacity","1");
             $(this).css("opacity","1");
             postBox.slideToggle();
-            $(this).text(String.fromCharCode(9652));
+            $(this).text(String.fromCharCode(9783));
         }
         else if(postBox.is( ":visible" )){
             postBox.slideToggle();
-            $(this).text(String.fromCharCode(9662));
+            $(this).text(String.fromCharCode(9776));
             postTitle.css("opacity","0.4");
             $(this).css("opacity","0.4");
         }

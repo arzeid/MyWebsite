@@ -34,7 +34,7 @@ h2 a {
     float:right; 
     color:black; 
     opacity: 0.4; 
-    transform: translateY(22px);
+    transform: translateY(12px);
 }
 
 .arrow:hover{
