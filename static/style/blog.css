@@ -17,11 +17,10 @@ h2 a {
     display:inline;
     padding-bottom: 0px !important;
     margin-bottom: 0px !important;
-    opacity:0.4;
 }
 
-.post-title:hover{
-    opacity: 0.8 !important;
+.post-title a{
+    opacity:0.4;
 }
 
 .post-date{ 
@@ -32,14 +31,13 @@ h2 a {
 
 .arrow{
     float:right; 
-    color:black; 
-    opacity: 0.4; 
-    transform: translateY(12px);
+    color:black;
 }
 
 .arrow:hover{
-    opacity: 0.6 !important;
+    opacity: 1 !important;
 }
+
 
 .post-box p{
     padding-right: 10px;
