@@ -10,9 +10,10 @@
     
     
     <dl>
-            <dt>{{ deck_name }}</dt>
-            <dd>{{ deck_url }}</dd>
-            <a href="{{ url_for('slides_view', name=deck_name) }}">slides</a>
+      {% for key, value in workshops.iteritems() %}
+            <dt><a href="{{ url_for('workshop_view', name=key) }}">{{ key }}</a></dt>
+            <dd>{{ value }}</dd>
+      {% endfor %}
     </dl>
 </div>
 {% endblock %}

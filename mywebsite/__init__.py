@@ -24,7 +24,7 @@ workshops_list = dict()
 with open(workshops_path,'r') as w_list:
     for line in w_list:
         name,url = line.split('=+=+=')
-        clean_name = name.replace(' ','-').lower()
+        clean_name = name.replace('-',' ').lower()
         workshops_list[clean_name] = url 
 
 if os.path.isfile(os.path.join(assets_path,'instance','deployment.cfg')):
