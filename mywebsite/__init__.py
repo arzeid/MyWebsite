@@ -15,6 +15,18 @@ app = Flask(
     root_path = os.path.join(assets_path,__name__)
 )
 
+app.config['FLATPAGES_ROOT'] = os.path.join(assets_path,'blog')
+flat_pages = FlatPages(app)
+
+workshops_path = os.path.join(assets_path,'workshops.list')
+app.config['WORKSHOPS_PATH'] = workshops_path
+workshops_list = dict()
+with open(workshops_path,'r') as w_list:
+    for line in w_list:
+        name,url = line.split('=+=+=')
+        clean_name = name.replace(' ','-').lower()
+        workshops_list[clean_name] = url 
+
 if os.path.isfile(os.path.join(assets_path,'instance','deployment.cfg')):
     app.config.from_pyfile('deployment.cfg', silent=False)
     print("===deployment config loaded===", file=sys.stderr)
@@ -33,9 +45,6 @@ else:
     )
     print("===default config loaded===", file=sys.stderr)
 
-app.config['FLATPAGES_ROOT'] = os.path.join(assets_path,'blog')
-
-flat_pages = FlatPages(app)
 
 if app.debug:
     from pygments.styles import get_all_styles
@@ -51,3 +60,4 @@ else:
 import mywebsite.shorten
 import mywebsite.home
 import mywebsite.blog
+import mywebsite.workshop
