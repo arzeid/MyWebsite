@@ -3,6 +3,7 @@ import os
 from flask import Flask
 from flask_flatpages import FlatPages
 import sys
+import platform
 
 assets_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -48,7 +49,7 @@ else:
 
 if app.debug:
     from pygments.styles import get_all_styles
-    print("==="+sys.version+"===", file=sys.stderr)
+    #print("==="+sys.version+"===", file=sys.stderr)
     #print(list(get_all_styles()))
 else:
     import logging
@@ -57,7 +58,10 @@ else:
     file_handler.setLevel(logging.WARNING)
     app.logger.addHandler(file_handler)
 
-import mywebsite.shorten
+if platform.system() != 'Windows':
+    import mywebsite.shorten
+else:
+    print(platform.system())
 import mywebsite.home
 import mywebsite.blog
 import mywebsite.workshop
