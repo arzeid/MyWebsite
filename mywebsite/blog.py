@@ -8,7 +8,7 @@ posts_list = []
 def generate_posts_list():
     global posts_list
     posts_list = [p for p in flat_pages]
-    posts_list.sort(key=lambda item:item['published'], reverse=False)
+    posts_list.sort(key=lambda item:item['published'], reverse=True)
 
 @app.route("/blog/")
 def posts():

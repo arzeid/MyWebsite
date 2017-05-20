@@ -11,5 +11,8 @@ def page_not_found(error):
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(app.static_folder,
-                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
+    return send_from_directory(
+        app.static_folder,
+        'favicon.ico',
+        mimetype='image/vnd.microsoft.icon'
+    )

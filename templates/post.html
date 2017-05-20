@@ -6,12 +6,13 @@
 {% block page %}
 <div class="vertical-space-uncollapsable"></div>
 <div class="box">
-    <h2 id="post-title">{{ post.title }}</h2>
-    <span id='post-date'>{{ post.published }}</span>
+    <h2>{{ post.title }}</h2>
+    <span>{{ post.published }}</span>
     <br>
     <div class="collapsed-border"></div>
     <div class="post-box" style='display: block;'>
         {{ post.html|safe }}
     </div>
+    <span class='post-category'>{{ post.category }}</span>
 </div>
 {% endblock %}

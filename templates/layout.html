@@ -17,10 +17,9 @@
 {% set navigation_bar = [
     ('/', 'Home', 'in'),
     ('/blog/', 'Blog', 'in'),
-    ('https://drive.google.com/file/d/0B7CoVsAaa3azbmhhU2dsd2p4TDg/view?usp=sharing', 
+    ('https://drive.google.com/file/d/0B7CoVsAaa3azcmNpVmJoNVZrUkE/view?usp=sharing',
         'Resume', 'out'),
-    ('/shorten/', 'Shorten', 'in'),
-    ('/workshops/', 'Workshops', 'in')
+    ('/shorten/', 'Shorten', 'in')
 ] -%}
 {% set active_page = active_page|default('Home') -%}
 
@@ -34,7 +33,7 @@
                 <a href="/">
                     A.Zeid
                 </a>
-            </span> 
+            </span>
             <span id="topnav-menu-button">
                 <a href="javascript:void(0);">
                     ☰ {{active_page}}
@@ -42,16 +41,16 @@
             </span>
         </div>
         <ul class="topnav">
-            
+
             {% for href, id, location in navigation_bar %}
             <li {%if id == active_page %} class="active-page" {% endif%}>
-                <a href="{{ href|e }}" 
+                <a href="{{ href|e }}"
                 {%if location == 'out' %}target="_blank"{% endif%}>
                 {{ id|e }}
                 </a>
             </li>
             {% endfor %}
-            
+
             <!--
             <li class="dropdown">
                 <a href="javascript:void(0);" class="dropbtn">Projects &#9662;</a>
@@ -64,27 +63,20 @@
             -->
         </ul>
     </div>
-    
+
     <div id="body">
-        
+
         <div class="vertical-space"></div>
 
         {% block page %}{% endblock %}
-        
+
         <div class="vertical-space"></div>
-        
+
     </div>
-</div>    
+</div>
 
 <footer>
     <div class="footer-margin"></div>
-    <!--
-    <a href="http://www.facebook.com/abdelrahmein.zeid" target="_blank">
-        <img src="/static/social-icons/facebook.png"
-             srcset="/static/social-icons/facebook.svg"
-             alt="facebook icon" class="social-icons">
-    </a>
-    -->
     <a href="mailto:arzeid.1994@gmail.com" target="_blank">
         <img src="/static/social-icons/gmail.png"
              srcset="/static/social-icons/gmail.svg"
@@ -99,6 +91,11 @@
         <img src="/static/social-icons/github.png"
              srcset="/static/social-icons/github.svg"
              alt="github icon" class="social-icons">
+    </a>
+    <a href="https://twitter.com/AbdelRahmanZeid" target="_blank">
+        <img src="/static/social-icons/twitter.png"
+             srcset="/static/social-icons/twitter.svg"
+             alt="twitter icon" class="social-icons">
     </a>
     <a href="https://soundcloud.com/arzeid" target="_blank">
         <img src="/static/social-icons/soundcloud.png"
